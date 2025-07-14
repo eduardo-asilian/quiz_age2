@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz de Civilización – Age of Empires II</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0 auto;
+      max-width: 840px;
+      padding: 1.5rem;
+      line-height: 1.4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    fieldset {
+      border: none;
+      margin: 1rem 0 2rem 0;
+      padding: 0;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    label {
+      display: block;
+      margin: 0.25rem 0;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      filter: brightness(0.9);
+    }
+    .result {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 2px solid #333;
+      border-radius: 6px;
+      background: #f7f7f7;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Qué civilización es para ti?</h1>
+  <form id="quizForm">
+    <!-- Pregunta 1 -->
+    <fieldset>
+      <legend>1. ¿Qué parte del juego te resulta más emocionante?</legend>
+      <label><input type="radio" name="q1" value="A" required /> A. El ataque relámpago en Feudal para tomar la iniciativa.</label>
+      <label><input type="radio" name="q1" value="B" /> B. Dominar el Castillo con una masa de unidades especializadas.</label>
+      <label><input type="radio" name="q1" value="C" /> C. Crecer tranquilo y lanzar un ejército sólido cuando todo está listo.</label>
+      <label><input type="radio" name="q1" value="D" /> D. Resistir, mejorar la tecnología y asestar el golpe final en Imperial.</label>
+    </fieldset>
+
+    <!-- Pregunta 2 -->
+    <fieldset>
+      <legend>2. ¿Cómo describirías tu micro‑gestión ideal?</legend>
+      <label><input type="radio" name="q2" value="A" required /> A. Golpear y retroceder con caballería móvil.</label>
+      <label><input type="radio" name="q2" value="B" /> B. Control fino de formaciones de arqueros para no perder ni un hombre.</label>
+      <label><input type="radio" name="q2" value="C" /> C. Micro sencillo; prefiero concentrarme en la economía.</label>
+      <label><input type="radio" name="q2" value="D" /> D. Mezclar varios tipos de unidades y monjes para descolocar al rival.</label>
+    </fieldset>
+
+    <!-- Pregunta 3 -->
+    <fieldset>
+      <legend>3. En mapas de agua…</legend>
+      <label><input type="radio" name="q3" value="A" required /> A. Prefiero los terrestres; el agua me retrasa.</label>
+      <label><input type="radio" name="q3" value="B" /> B. Pequeños desembarcos son divertidos, pero sin descuidar tierra.</label>
+      <label><input type="radio" name="q3" value="C" /> C. Si hay que pelear en agua, lo hago con economía fuerte detrás.</label>
+      <label><input type="radio" name="q3" value="D" /> D. ¡Me encanta el control naval completo!</label>
+    </fieldset>
+
+    <!-- Pregunta 4 -->
+    <fieldset>
+      <legend>4. Ante la presión enemiga temprana, tú…</legend>
+      <label><input type="radio" name="q4" value="A" required /> A. ¡La mejor defensa es un buen ataque!</label>
+      <label><input type="radio" name="q4" value="B" /> B. Coloco arqueros en colinas y defiendo mientras castigo.</label>
+      <label><input type="radio" name="q4" value="C" /> C. Levanto murallas ligeras y vuelvo al boom.</label>
+      <label><input type="radio" name="q4" value="D" /> D. Fortifico con muros de piedra y torres; que vengan.</label>
+    </fieldset>
+
+    <!-- Pregunta 5 -->
+    <fieldset>
+      <legend>5. Tu unidad soñada debe ser…</legend>
+      <label><input type="radio" name="q5" value="A" required /> A. Rápida y con alto daño cuerpo‑a‑cuerpo.</label>
+      <label><input type="radio" name="q5" value="B" /> B. De largo alcance y gran precisión.</label>
+      <label><input type="radio" name="q5" value="C" /> C. Barata, numerosa y resistente.</label>
+      <label><input type="radio" name="q5" value="D" /> D. Especial o con habilidades (curar, convertir, disparo de asedio).</label>
+    </fieldset>
+
+    <!-- Pregunta 6 -->
+    <fieldset>
+      <legend>6. ¿Qué tan a gusto te sientes con los monjes?</legend>
+      <label><input type="radio" name="q6" value="A" required /> A. Poco; me concentro en el combate directo.</label>
+      <label><input type="radio" name="q6" value="B" /> B. Alguna reliquia está bien, pero sin volverme loco.</label>
+      <label><input type="radio" name="q6" value="C" /> C. Los uso si el mapa los regala.</label>
+      <label><input type="radio" name="q6" value="D" /> D. ¡Los adoro! Convertir armas enemigas es arte.</label>
+    </fieldset>
+
+    <!-- Pregunta 7 -->
+    <fieldset>
+      <legend>7. ¿Cuánta atención dedicas a la economía?</legend>
+      <label><input type="radio" name="q7" value="A" required /> A. La justa para mantener la producción constante de ejército.</label>
+      <label><input type="radio" name="q7" value="B" /> B. Equilibrada: eco sólida pero siempre lista para batallar.</label>
+      <label><input type="radio" name="q7" value="C" /> C. Es mi prioridad; si no booméo, no me siento cómodo.</label>
+      <label><input type="radio" name="q7" value="D" /> D. Invierto fuerte en mejoras y tecnología a largo plazo.</label>
+    </fieldset>
+
+    <!-- Pregunta 8 -->
+    <fieldset>
+      <legend>8. ¿Qué sensación te produce jugar al límite de recursos?</legend>
+      <label><input type="radio" name="q8" value="A" required /> A. Adrenalina pura; me motiva a arriesgar.</label>
+      <label><input type="radio" name="q8" value="B" /> B. Controlada: sé que mis unidades rentan cada recurso.</label>
+      <label><input type="radio" name="q8" value="C" /> C. Prefiero reservas amplias y juegos calculados.</label>
+      <label><input type="radio" name="q8" value="D" /> D. No me preocupa; confiaré en mis murallas y monasterios.</label>
+    </fieldset>
+
+    <!-- Pregunta 9 -->
+    <fieldset>
+      <legend>9. ¿Cómo te gusta cerrar una partida?</legend>
+      <label><input type="radio" name="q9" value="A" required /> A. Con una carga de caballería que borre su economía.</label>
+      <label><input type="radio" name="q9" value="B" /> B. Con lluvia de flechas y castillos avanzados.</label>
+      <label><input type="radio" name="q9" value="C" /> C. Con un ejército mixto fruto de un boom imparable.</label>
+      <label><input type="radio" name="q9" value="D" /> D. Con armas de asedio rompiendo todo mientras convierto unidades.</label>
+    </fieldset>
+
+    <!-- Pregunta 10 -->
+    <fieldset>
+      <legend>10. ¿Cuál de estas frases se acerca más a tu filosofía de juego?</legend>
+      <label><input type="radio" name="q10" value="A" required /> A. “La mejor estrategia es la velocidad.”</label>
+      <label><input type="radio" name="q10" value="B" /> B. “La precisión vence a la fuerza bruta.”</label>
+      <label><input type="radio" name="q10" value="C" /> C. “Sin una base sólida, no hay victoria duradera.”</label>
+      <label><input type="radio" name="q10" value="D" /> D. “Paciencia y conocimiento traen la supremacía.”</label>
+    </fieldset>
+
+    <button type="submit">Ver mi civilización</button>
+  </form>
+
+  <div id="result" class="result" style="display:none;"></div>
+
+  <script>
+    const civMap = {
+      A: "Franks",
+      B: "Britons",
+      C: "Vikings",
+      D: "Teutons",
+    };
+
+    document.getElementById("quizForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const answers = [];
+      for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`input[name=q${i}]:checked`);
+        if (selected) answers.push(selected.value);
+      }
+
+      const counts = { A: 0, B: 0, C: 0, D: 0 };
+      answers.forEach((ans) => counts[ans]++);
+
+      // Obtener la letra con mayor frecuencia
+      let winner = "A";
+      for (const letter of Object.keys(counts)) {
+        if (counts[letter] > counts[winner]) winner = letter;
+      }
+
+      // Mostrar resultado
+      const resultEl = document.getElementById("result");
+      resultEl.style.display = "block";
+      resultEl.innerHTML =
+        `<h2>¡Tu civilización recomendada es: ${civMap[winner]}!</h2>` +
+        `<p>Letra predominante: <strong>${winner}</strong></p>`;
+
+      // Scroll al resultado
+      resultEl.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
